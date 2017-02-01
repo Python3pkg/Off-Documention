@@ -1,0 +1,129 @@
+Metadata-Version: 1.1
+Name: DocDownloader
+Version: 1.3.2
+Summary: Downloads Documentation from ReadTheDocs in multiple formats
+Home-page: https://github.com/gkdeveloper/off-documentation
+Author: Gaurav Kumar Verma	
+Author-email: gkverma1094@gmail.com
+License: MIT
+Description: OffDocumentation - Download Docs from ReadTheDocs
+
+        ==============================================
+
+        
+
+        |License| |Development Status|
+
+        
+
+        OffDocumentation is a python 2/3 module/utility to download Documenation
+
+        hosted on ReadTheDocs in HTML, PDF and EPUB Formats
+
+        
+
+        It can be used from the terminal or by using the API.
+
+        
+
+        Installation
+
+        ------------
+
+        
+
+        Installing is simple, just enter this command:
+
+        
+
+        ::
+
+        
+
+            pip install OffDocumentation
+
+        
+
+        You need to have pip installed to run this command
+
+        
+
+        Usage
+
+        -----
+
+        
+
+        Just run the following command:
+
+        
+
+        ::
+
+        
+
+            offdocumentation [-f format] [-d directory] url/package name
+
+        
+
+        For example,
+
+        
+
+        ::
+
+        
+
+            offdocumentation -f HTML flask
+
+        
+
+        or
+
+        
+
+        ::
+
+        
+
+            offdocumentation -f epub http://scrapy.readthedocs.org/en/latest/
+
+        
+
+        API Usage
+
+        ---------
+
+        
+
+        You can use the module from python also. Example code:
+
+        
+
+        .. code:: python
+
+        
+
+            from offdocumentation import offdocumentation
+
+            DocDwn=offdocumentation('flask','pdf')
+
+            DocDwn.download()
+
+        
+
+        Dependencies
+
+        ------------
+
+        
+
+        1. requests
+
+        2. BeautifulSoup4
+
+        3. wget (the python module)
+
+        
+    
+

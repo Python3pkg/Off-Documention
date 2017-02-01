@@ -5,20 +5,20 @@ try:
     description=pypandoc.convert('readme.md','rst')
 except:
     description=''
-setup(name='DocDownloader',
-      version="1.3.2",
+setup(name='Offdownloader',
+      version="1.0.2",
       description='Downloads Documentation from ReadTheDocs in multiple formats',
       long_description=description,
       url='https://github.com/gkdeveloper/Off-documention',
       author='Gaurav Kumar Verma',
       author_email='gkverma1094@gmail.com',
-      packages=['DocDownloader'],
+      packages=['Off    Downloader'],
       install_requires=[
           'beautifulsoup4',
           'requests'  ,'wget' ],
-      scripts=['bin/docdownloader'],
+      scripts=['bin/offdownloader'],
       classifiers=[
-          "Development Status :: 4 - Beta",
+          "Development Status :: 1 - Beta",
           "Topic :: Utilities",
           "Operating System :: OS Independent",
           "Programming Language :: Python"
