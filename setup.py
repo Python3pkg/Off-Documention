@@ -12,13 +12,14 @@ setup(name='Offdownloader',
       url='https://github.com/gkdeveloper/Off-documention',
       author='Gaurav Kumar Verma',
       author_email='gkverma1094@gmail.com',
-      packages=['Off    Downloader'],
+      license='MIT',
+      packages=['OffDownloader'],
       install_requires=[
           'beautifulsoup4',
           'requests'  ,'wget' ],
       scripts=['bin/offdownloader'],
       classifiers=[
-          "Development Status :: 1 - Beta",
+          "Development Status :: 4 - Beta",
           "Topic :: Utilities",
           "Operating System :: OS Independent",
           "Programming Language :: Python"
