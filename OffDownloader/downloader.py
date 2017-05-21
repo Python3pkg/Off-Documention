@@ -3,7 +3,7 @@ __version__= "1.0.3"
 from bs4 import BeautifulSoup
 import requests, wget, os, zipfile, sys, argparse
 try:
-    import urllib2
+    import urllib.request, urllib.error, urllib.parse
     python=2
 except ImportError:
     python = 3
@@ -26,7 +26,7 @@ class OffDownloader:
         elif  self.format.lower()=="epub":
             self.downloadEPUB()
         else:
-            print ("Unknown Format {0}".format(self.format))
+            print(("Unknown Format {0}".format(self.format)))
             sys.exit(0)
     def getVariable(self,url):
         html=requests.get(url).text
@@ -42,16 +42,16 @@ class OffDownloader:
         url="https://media.readthedocs.org/htmlzip/{0}/latest/{0}.zip".format(self.url)
         location="{0}/{1}.zip".format(os.getcwd(),self.url)
         f=wget.download(url,out=os.getcwd())
-        print ("\n{0} has been downloaded.. Extracting zip".format(self.url))
+        print(("\n{0} has been downloaded.. Extracting zip".format(self.url)))
         extractZIP(location,self.url)
     def downloadEPUB(self):
         url="https://media.readthedocs.org/epub/{0}/latest/{0}.epub".format(self.url)
         f=wget.download(url,out=os.getcwd())
-        print ("\n{0} has been downloaded".format(f))
+        print(("\n{0} has been downloaded".format(f)))
     def downloadPDF(self):
         url="https://media.readthedocs.org/pdf/{0}/latest/{0}.pdf".format(self.url)
         f=wget.download(url,out=os.getcwd())
-        print ("\n{0} has been downloaded".format(f))
+        print(("\n{0} has been downloaded".format(f)))
 
 def find_between( s, first, last ):
     try:
